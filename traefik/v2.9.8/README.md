@@ -20,9 +20,9 @@ docker build -t tingyun-traefik:v2.9.8 .
 ```
 
 ### 探针配置
-1. 容器/pod部署方式运行traefik的配置
-  + traefik:v2.9.8 替换成 tingyun-traefik:v2.9.8
-  + 创建容器/Pod时设置环境变量:
+1. 以容器方式运行的traefik的配置:
+  + 将容器镜像traefik:v2.9.8 替换成 tingyun-traefik:v2.9.8
+  + 创建容器时设置环境变量:
   ```
   # 1. 配置授权字符串
   #  TINGYUN_LICENSE_KEY="${TingyunLicense}"
