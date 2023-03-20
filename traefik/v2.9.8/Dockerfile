@@ -1,5 +1,7 @@
 FROM alpine:3.15
 RUN apk --no-cache add ca-certificates tzdata
+RUN mkdir -p /etc/tingyun
+COPY tingyun.conf /etc/tingyun/go_app_config.conf
 COPY traefik/dist/traefik /usr/local/bin/traefik
 COPY entrypoint.sh /
 EXPOSE 80
